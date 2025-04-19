@@ -1,1 +1,12 @@
-<p>products works!</p>
+@if(loading) {
+<app-loader></app-loader>
+} @else {
+<div
+  class="px-2 sm:px-0 container mx-auto grid gap-2 [grid-template-columns:repeat(auto-fit,minmax(250px,1fr))]"
+>
+  @for (product of products; track $index) {
+
+  <app-product-card [product]="product"></app-product-card>
+  }
+</div>
+}

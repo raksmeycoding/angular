@@ -1,1 +1,35 @@
-<p>product-card works!</p>
+@let cart = productItem;
+
+<div class="cart rounded-2xl bg-teal-100 h-[400px] overflow-hidden">
+  <img
+    class="object-cover h-60 w-full rounded-t-2xl"
+    src="{{ cart.images[0] }}"
+    alt=""
+    srcset=""
+  />
+
+  <div class="px-2 flex flex-col items-start justify-evenly">
+    <div class="title font-bold line-clamp-1">{{ cart.title }}</div>
+    <div class="price">
+      Price: <strong> {{ cart.price }}$ </strong>
+    </div>
+    <div class="category">
+      Category:
+      <span class="font-bold">{{ cart.category.name }}</span>
+    </div>
+    <div class="description line-clamp-1">
+      Description: {{ cart.description }}
+    </div>
+
+    <!-- <div class="creationAt">{{ creationAt }}</div> -->
+    <div class="updateAt text-gray-500 font-semibold">
+      About {{ updateAt }} hours
+    </div>
+    <button
+      (click)="addToCardItem(cart)"
+      class="bg-teal-700 text-white rounded-md px-2 py-1 cursor-pointer"
+    >
+      Add to Card
+    </button>
+  </div>
+</div>
