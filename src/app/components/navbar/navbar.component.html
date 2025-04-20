@@ -9,7 +9,11 @@
         >
       </li>
       <li>
-        <a class="cart-link relative" routerLink="cart">
+        <a
+          (click)="showOffCanVas()"
+          class="cart-link relative cursor-pointer"
+          routerLink="cart"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="44"
@@ -28,3 +32,7 @@
     </ul>
   </nav>
 </header>
+
+<!-- header remains same -->
+
+<app-offcanvas [visible]="showDrawer"></app-offcanvas>

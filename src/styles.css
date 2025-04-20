@@ -1,2 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import "tailwindcss";
+/* optional: smooth sliding effect */
+.offcanvas-panel {
+  transform: translateX(0);
+}

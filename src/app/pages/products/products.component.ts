@@ -4,6 +4,7 @@ import { Product } from '../../interfaces/product';
 import { LoaderComponent } from '../../components/loader/loader.component';
 import { CommonModule } from '@angular/common';
 import { ProductCardComponent } from '../../components/product-card/product-card.component';
+import { OffcanvasComponent } from '../../components/offcanvas/offcanvas.component';
 
 @Component({
   selector: 'app-products',
